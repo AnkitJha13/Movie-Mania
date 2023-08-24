@@ -230,20 +230,3 @@ h1 {
   }
 }
 
-
-
-
-/* Your existing CSS styles */
-
-.movie.clicked {
-  height: auto;
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05, 1.05);
-}
-
-.movie-details {
-  background-color: #343739;
-  padding: 16px;
-  color: #f0f0f0;
-  font-family: 'Raleway', sans-serif;
-}
