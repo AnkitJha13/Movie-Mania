@@ -17,5 +17,5 @@ On the home page, you'll find a search bar. Enter keywords related to the "Fast 
 -View Movie Details:
 Click on a movie from the search results to view detailed information about it. This includes the movie's title, release year, synopsis, and other relevant information.
 
--Responsive Design:
+-Responsive Design:   
 The application is designed to be responsive, ensuring a consistent experience across various devices, including desktops, tablets, and mobile phones.
