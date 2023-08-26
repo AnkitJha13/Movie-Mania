@@ -5,6 +5,10 @@ Movie Mania is a React-based web application that allows users to search for mov
 ## Website Link
 You can access the Movie Mania site by following this link : [Movie Mania](https://moviess-mania.netlify.app/)
 
+## ScreenShot
+![1](https://github.com/AnkitJha13/Quote-App/assets/116744896/e6a210eb-baba-4d96-9055-e6c28636734c)
+![2](https://github.com/AnkitJha13/Quote-App/assets/116744896/9852f1be-e039-4900-9f9e-6a1a202cabfb)
+
 ## Features
 - Search Movies: Users can search for movies related to the "Fast and Furious" franchise.
 - Movie Details: Get detailed information about each movie, including title, release year, plot summary, and more.
