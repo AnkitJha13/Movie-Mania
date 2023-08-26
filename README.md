@@ -19,3 +19,7 @@ You can access the Movie Mania site by following this link : [Movie Mania](https
 
 ## Responsive Design:   
 - The application is designed to be responsive, ensuring a consistent experience across various devices, including desktops, tablets, and mobile phones.
+
+## Technologies Used
+- React
+- The Movie Database (TMDb) API
