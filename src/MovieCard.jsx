@@ -1,6 +1,7 @@
 import React from "react";
 
 const MovieCard = ({ movie }) => {
+    console.log("Movie object:", movie);
     return (
         <div className="movie">
             <div>
@@ -18,9 +19,12 @@ const MovieCard = ({ movie }) => {
                 />
             </div>
 
-            <div>
-                <span>{movie.Type}</span>
-                <h3>{movie.Title}</h3>
+            <div className="movie-info">
+                <span className="movie-type">{movie.Type}</span>
+                <h3 className="movie-title">{movie.Title}</h3>
+                {movie.imdbRating && (
+                    <p className="movie-rating">IMDb Rating: {movie.imdbRating}</p>
+                )}
             </div>
         </div>
     );
