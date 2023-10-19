@@ -1,58 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900");
 
 * {
   margin: 0;
-  border: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 :root {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
+  --primary-color: #0074e4;
+  --secondary-color: #f9d3b4;
+  --background-dark: #212426;
+  --background-light: #343739;
+  --text-color: #f0f0f0;
 }
 
 body {
+  background-image: url('Movie\ website\ bcg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   font-family: var(--font-roboto);
-  background-color: #212426;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .app {
   padding: 4rem;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+  color: var(--secondary-color);
 }
 
 .search {
-  width: 71%;
-  margin: 4rem 0 2rem;
-
+  width: 100%;
+  max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 1.5rem 1.75rem;
-  border-radius: 3rem;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  margin: 2rem 0;
 }
 
 .search input {
@@ -60,57 +57,60 @@ h1 {
   border: none;
   font-size: 1.5rem;
   font-family: var(--font-raleway);
-  font-weight: 500;
-  padding-right: 1rem;
-
+  font-weight: 400;
+  padding: 1rem;
   outline: none;
-  color: #a1a1a1;
-  background: #1f2123;
+  color: var(--text-color);
+  background: var(--background-light);
+  border-radius: 3rem;
 }
 
 .search img {
   width: 35px;
   height: 35px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .empty {
   width: 100%;
   margin-top: 3rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .empty h2 {
-  font-size: 1.25rem;
-  color: #f9d3b4;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
   font-family: var(--font-raleway);
 }
 
 .container {
   width: 100%;
   margin-top: 3rem;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .movie {
   width: 310px;
   height: 460px;
   margin: 1.5rem;
-
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   border: none;
-
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.movie:hover {
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05, 1.05);
 }
 
 .movie div:nth-of-type(1) {
@@ -119,12 +119,8 @@ h1 {
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #f9d3b4;
-}
-
-.movie:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05, 1.05);
+  color: var(--secondary-color);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .movie div:nth-of-type(2) {
@@ -135,13 +131,13 @@ h1 {
 .movie div:nth-of-type(2) img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .movie div:nth-of-type(3) {
   z-index: 2;
-  background-color: #343739;
+  background-color: var(--background-light);
   padding: 16px 24px 24px 24px;
-
   position: absolute;
   bottom: 0;
   right: 0;
@@ -149,31 +145,56 @@ h1 {
 }
 
 .movie div:nth-of-type(3) span {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
-  font-weight: 500;
-  color: #f0f0f0;
+  font-weight: 600;
+  color: var(--secondary-color);
 }
 
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  font-family: "Roboto Slab", serif;
-  color: #f9d3b4;
+  font-family: var(--font-roboto);
+  color: var(--secondary-color);
 }
 
-.movie:hover div:nth-of-type(2) {
-  height: 100%;
-  opacity: 0.3;
+/* IMDb link styles */
+.movie-imdb-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  margin-top: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
 }
 
-.movie:hover div:nth-of-type(3) {
-  background-color: transparent;
+.movie-imdb-link:hover {
+  background-color: #0058a7;
 }
 
-.movie:hover div:nth-of-type(1) {
-  opacity: 1;
+/* IMDb rating styles */
+.movie-imdb-rating {
+  margin-top: 8px;
+  color: var(--secondary-color);
+  font-family: var(--font-raleway);
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color); /* Set IMDb rating color to match the primary color */
+}
+
+/* Box Office collection styles */
+.movie-box-office {
+  margin-top: 8px;
+  color: var(--secondary-color);
+  font-family: var(--font-raleway);
+  font-size: 14px;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -183,7 +204,6 @@ h1 {
 
   .search {
     padding: 1rem 1.75rem;
-    width: 100%;
   }
 
   .search input {
@@ -193,6 +213,15 @@ h1 {
   .search img {
     width: 20px;
     height: 20px;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: 100%;
+    margin: 1rem;
   }
 }
 
@@ -204,36 +233,4 @@ h1 {
   h1 {
     font-size: 2rem;
   }
-
-  .container {
-    margin-top: 2rem;
-  }
-
-  .movie {
-    width: "100%";
-    margin: 1rem;
-  }
-}
-
-
-
-
-
-
-
-
-.movie-rating {
-  margin-top: 8px;
-  color: #f9d3b4;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-}
-
-.rating-label {
-  font-weight: bold;
-  margin-right: 4px;
-}
-
-.rating-value {
-  font-weight: normal;
 }
