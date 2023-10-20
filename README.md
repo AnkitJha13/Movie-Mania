@@ -6,8 +6,14 @@ Movie Mania is a React-based web application that allows users to search for mov
 You can access the Movie Mania site by following this link : [Movie Mania](https://moviess-mania.netlify.app/)
 
 ## ScreenShot
+
+BATMAN -->
 ![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/83f01b85-bdb9-47ee-b0d9-cacaa6451212)
 ![2](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/cc9acc55-4f43-40c4-9552-57ce24f9072b)
+
+MISSION IMPOSSIBLE -->
+![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/ea26940d-400a-48cb-9686-6407ca616a3a)
+![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/efa4a075-1668-47fc-8b84-96607ec77fad)
 
 
 
