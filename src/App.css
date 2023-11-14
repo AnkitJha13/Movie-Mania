@@ -18,8 +18,8 @@
 }
 
 body {
-  background-image: url('Movie\ website\ bcg.jpg');
-  background-size: cover;
+  background-image: url('Movie\ bcg.jpg');
+  background-size: 100% 100%; /* Set background-size to cover the entire background */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
