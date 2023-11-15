@@ -12,9 +12,9 @@ BATMAN -->
 ![2](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/cc9acc55-4f43-40c4-9552-57ce24f9072b)
 
 MISSION IMPOSSIBLE -->
-![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/ea26940d-400a-48cb-9686-6407ca616a3a)
-![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/efa4a075-1668-47fc-8b84-96607ec77fad)
 ![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/0b3c6caa-cccb-4943-9a22-f136a4ab7ead)
+![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/39d53a73-7303-40b5-84a3-d6f531ab05a8)
+
 
 
 
