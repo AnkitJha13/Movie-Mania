@@ -14,7 +14,7 @@ BATMAN -->
 MISSION IMPOSSIBLE -->
 ![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/ea26940d-400a-48cb-9686-6407ca616a3a)
 ![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/efa4a075-1668-47fc-8b84-96607ec77fad)
-![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/cff0e0f9-d5cb-4868-9fd2-99cac52b0b2d)
+![Uploading 3.png…]()
 
 
 
