@@ -10,24 +10,35 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
+    try {
+      const response = await fetch(`${API_URL}&s=${title}`);
+      const data = await response.json();
 
-    if (data.Search) {
-      const moviesWithRatings = await Promise.all(
-        data.Search.map(async (movie) => {
-          const response = await fetch(`${API_URL}&i=${movie.imdbID}`);
-          const movieData = await response.json();
-          return {
-            ...movie,
-            imdbRating: movieData.imdbRating,
-            BoxOffice: movieData.BoxOffice, // Add Box Office information
-          };
-        })
-      );
+      if (data.Search) {
+        const moviesWithRatings = await Promise.all(
+          data.Search.map(async (movie) => {
+            try {
+              const response = await fetch(`${API_URL}&i=${movie.imdbID}`);
+              const movieData = await response.json();
 
-      setMovies(moviesWithRatings);
-    } else {
+              return {
+                ...movie,
+                imdbRating: movieData.imdbRating,
+                BoxOffice: movieData.BoxOffice,
+              };
+            } catch (error) {
+              console.error('Error fetching movie details:', error);
+              return movie;
+            }
+          })
+        );
+
+        setMovies(moviesWithRatings);
+      } else {
+        setMovies([]);
+      }
+    } catch (error) {
+      console.error('Error searching movies:', error);
       setMovies([]);
     }
   };
@@ -54,9 +65,9 @@ const App = () => {
 
       {movies?.length > 0 ? (
         <div className="container">
-          {movies.map((movie, index) => {
-            return <MovieCard key={index} movie={movie} />;
-          })}
+          {movies.map((movie, index) => (
+            <MovieCard key={index} movie={movie} />
+          ))}
         </div>
       ) : (
         <div className="empty">
