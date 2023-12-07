@@ -19,7 +19,7 @@
 
 body {
   background-image: url('Movie\ bcg.jpg');
-  background-size: 100% 100%; /* Set background-size to cover the entire background */
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -27,7 +27,23 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  position: relative; /* Added position: relative */
 }
+
+/* Add an overlay to dim the background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for the desired dimness */
+  pointer-events: none; /* Allow mouse events to pass through the overlay */
+}
+
+
+
 
 .app {
   padding: 4rem;
@@ -159,25 +175,37 @@ h1 {
   color: var(--secondary-color);
 }
 
-/* IMDb link styles */
-.movie-imdb-link {
+.movie-imdb-link,
+.movie-trailer-link {
   display: inline-block;
   padding: 5px 10px;
-  background-color: var(--primary-color);
-  color: #fff;
-  text-decoration: none;
   margin-top: 8px;
+  margin-right: 8px; /* Added margin-right for spacing */
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
   text-align: center;
+  text-decoration: none;
+}
+
+.movie-imdb-link {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .movie-imdb-link:hover {
   background-color: #0058a7;
 }
 
-/* IMDb rating styles */
+.movie-trailer-link {
+  background-color: #0074e4;
+  color: #fff;
+}
+
+.movie-trailer-link:hover {
+  background-color: #0058a7;
+}
+
 .movie-imdb-rating {
   margin-top: 8px;
   color: var(--secondary-color);
@@ -185,16 +213,23 @@ h1 {
   font-size: 14px;
   text-align: center;
   font-weight: bold;
-  color: var(--primary-color); /* Set IMDb rating color to match the primary color */
+  color: var(--primary-color);
 }
 
-/* Box Office collection styles */
-.movie-box-office {
+.movie-box-office,
+.movie-genres {
   margin-top: 8px;
   color: var(--secondary-color);
   font-family: var(--font-raleway);
   font-size: 14px;
   text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 600px) {
