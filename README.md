@@ -16,6 +16,7 @@ MISSION IMPOSSIBLE -->
 ![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/0b3c6caa-cccb-4943-9a22-f136a4ab7ead)
 ![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/39d53a73-7303-40b5-84a3-d6f531ab05a8)
 
+![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/2cc915cd-ca9b-45e5-ba64-52a462041e14)
 
 
 
