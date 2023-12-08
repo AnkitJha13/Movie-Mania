@@ -9,6 +9,7 @@ You can access the Movie Mania site by following this link : [Movie Mania](https
 
 BATMAN -->
 ![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/3cb068e9-9497-4abd-a39d-f3edb3aeba48)
+![2](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/169e6dae-af9e-4ab6-b71c-1165d2acdd28)
 
 
 MISSION IMPOSSIBLE -->
