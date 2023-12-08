@@ -8,16 +8,10 @@ You can access the Movie Mania site by following this link : [Movie Mania](https
 ## ScreenShot
 
 BATMAN -->
-![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/b9399ecc-46eb-4dfe-80e0-3e1ce2136342)
-![2](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/f453e63d-5607-4610-ad00-72f6f96c74e9)
+![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/3cb068e9-9497-4abd-a39d-f3edb3aeba48)
 
 
 MISSION IMPOSSIBLE -->
-![3](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/0b3c6caa-cccb-4943-9a22-f136a4ab7ead)
-![4](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/39d53a73-7303-40b5-84a3-d6f531ab05a8)
-
-![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/1c88ee14-e49d-42f6-a610-be757edf2b96)
-![1](https://github.com/AnkitJha13/Movie-Mania/assets/116744896/bef7ddaf-b3fe-4826-ab94-52f8f8e0b455)
 
 
 
