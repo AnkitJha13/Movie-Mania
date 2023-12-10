@@ -31,7 +31,7 @@ MISSION IMPOSSIBLE -->
 
 ## View Movie Details:
 - Click on a movie from the search results to view detailed information about it. This includes the movie's title, release year, synopsis, and other relevant information.
-- Crafted ”Movie Connect” using React featuring real-time box office statistics, IMDb ratings, and direct IMDb links to elevate the user experience.
+- This ”Movie Connect” also features real-time box office statistics, IMDb ratings, and direct IMDb links to elevate the user experience.
 
 ## Responsive Design:   
 - The application is designed to be responsive, ensuring a consistent experience across various devices, including desktops, tablets, and mobile phones.
