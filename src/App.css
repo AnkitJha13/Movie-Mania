@@ -27,7 +27,7 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  position: relative; /* Added position: relative */
+  position: relative;
 }
 
 /* Add an overlay to dim the background */
@@ -38,12 +38,9 @@ body::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for the desired dimness */
-  pointer-events: none; /* Allow mouse events to pass through the overlay */
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
-
-
-
 
 .app {
   padding: 4rem;
@@ -135,8 +132,14 @@ h1 {
   width: 100%;
   opacity: 0;
   top: 0;
+  left: 0;
   color: var(--secondary-color);
   background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie:hover div:nth-of-type(1) {
+  opacity: 1;
 }
 
 .movie div:nth-of-type(2) {
@@ -180,7 +183,6 @@ h1 {
   display: inline-block;
   padding: 5px 10px;
   margin-top: 8px;
-  margin-right: 8px; /* Added margin-right for spacing */
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -191,6 +193,7 @@ h1 {
 .movie-imdb-link {
   background-color: var(--primary-color);
   color: #fff;
+  margin-right: 8px;
 }
 
 .movie-imdb-link:hover {
@@ -227,7 +230,6 @@ h1 {
 
 .button-container {
   display: flex;
-  flex-direction: column;
   gap: 10px;
   margin-top: 10px;
 }
