@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-:root {
+:root { /* used root for consistent theming throughput the application */
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
   --primary-color: #0074e4;
