@@ -6,11 +6,16 @@ import SearchIcon from './search.svg';
 const API_URL = 'https://www.omdbapi.com?apikey=4084c83e';
 
 const App = () => {
+  
+  // State to hold the list of movies and the search term
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-
+  
+  // Function to search for movies based on the provided title
   const searchMovies = async (title) => {
     try {
+
+      // Fetch movie data from OMDB API using the provided title
       const response = await fetch(`${API_URL}&s=${title}`);
       const data = await response.json();
 
