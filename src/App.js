@@ -19,13 +19,17 @@ const App = () => {
       const response = await fetch(`${API_URL}&s=${title}`);
       const data = await response.json();
 
+      // Check if the search returned any results
       if (data.Search) {
+
+        // Fetch additional details for each movie, including IMDb rating and Box Office
         const moviesWithRatings = await Promise.all(
           data.Search.map(async (movie) => {
             try {
               const response = await fetch(`${API_URL}&i=${movie.imdbID}`);
               const movieData = await response.json();
 
+              // Add IMDb rating and Box Office details to the movie object
               return {
                 ...movie,
                 imdbRating: movieData.imdbRating,
@@ -33,25 +37,29 @@ const App = () => {
               };
             } catch (error) {
               console.error('Error fetching movie details:', error);
-              return movie;
+              return movie; // Return the original movie object if there is an error fetching details
             }
           })
         );
 
+        // Update the movies state with the enhanced movie data
         setMovies(moviesWithRatings);
       } else {
+        // If no results were found, set movies state to an empty array
         setMovies([]);
       }
     } catch (error) {
       console.error('Error searching movies:', error);
-      setMovies([]);
+      setMovies([]);  // Set movies state to an empty array in case of an error
     }
   };
 
+  // useEffect hook to initially search for movies when the component mounts
   useEffect(() => {
     searchMovies('Batman');
   }, []);
 
+  // Render the App component
   return (
     <div className="app">
       <h1>Movie Mania</h1>
