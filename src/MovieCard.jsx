@@ -4,13 +4,14 @@ const API_URL = 'https://www.omdbapi.com?apikey=4084c83e';
 
 const MovieCard = ({ movie }) => {
   const [genres, setGenres] = useState([]);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const fetchGenres = async () => {
       try {
         const response = await fetch(`${API_URL}&i=${movie.imdbID}`);
         const movieData = await response.json();
-        
+
         if (movieData.Genre) {
           const movieGenres = movieData.Genre.split(',').map((genre) => genre.trim());
           setGenres(movieGenres);
@@ -29,24 +30,27 @@ const MovieCard = ({ movie }) => {
   )}`;
 
   return (
-    <div className="movie">
-      <div>
+    <div
+      className={`movie ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="release-year">
         <p>{movie.Year}</p>
       </div>
 
       <div>
         <img
           src={
-            movie.Poster !== "N/A"
+            movie.Poster !== 'N/A'
               ? movie.Poster
-              : "https://via.placeholder.com/400"
+              : 'https://via.placeholder.com/400'
           }
           alt={movie.Title}
         />
       </div>
 
       <div className="movie-info">
-        <span className="movie-type">{movie.Type}</span>
         <h3 className="movie-title">{movie.Title}</h3>
 
         {genres.length > 0 && (
