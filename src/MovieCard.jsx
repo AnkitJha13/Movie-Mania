@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 const API_URL = 'https://www.omdbapi.com?apikey=4084c83e';
 
-const MovieCard = ({ movie }) => {       // takes a movie prop as an argument
-  
-  // State to hold the movie genres and hover state
+const MovieCard = ({ movie, onOpenPopup, onWatchTrailer }) => {
   const [genres, setGenres] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
 
-  // useEffect to fetch movie genres when the component mounts or movie changes
-  useEffect(() => {         //to fetch movie genres when the component mounts or when the movie.imdbID changes.
+  useEffect(() => {
     const fetchGenres = async () => {
       try {
-        // Fetch movie data using IMDb ID
         const response = await fetch(`${API_URL}&i=${movie.imdbID}`);
         const movieData = await response.json();
 
         if (movieData.Genre) {
-          // Extract genres from the response and update state
           const movieGenres = movieData.Genre.split(',').map((genre) => genre.trim());
           setGenres(movieGenres);
         }
@@ -25,28 +21,26 @@ const MovieCard = ({ movie }) => {       // takes a movie prop as an argument
         console.error('Error fetching movie genres:', error);
       }
     };
-    // Call fetchGenres function
-    fetchGenres();
-  }, [movie.imdbID]); // Dependency array to re-run effect when movie.imdbID changes
 
-  // IMDb and YouTube links based on movie details
+    fetchGenres();
+  }, [movie.imdbID]);
+
   const imdbLink = `https://www.imdb.com/title/${movie.imdbID}/`;
   const youtubeLink = `https://www.youtube.com/results?search_query=${encodeURIComponent(
     `${movie.Title} ${movie.Year} trailer`
   )}`;
 
-   // Render the MovieCard component
   return (
     <div
       className={`movie ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="release-year">
+      <div className="movie-overlay">
         <p>{movie.Year}</p>
       </div>
 
-      <div>
+      <div className="movie-poster">
         <img
           src={
             movie.Poster !== 'N/A'
@@ -77,6 +71,10 @@ const MovieCard = ({ movie }) => {       // takes a movie prop as an argument
           target="_blank"
           rel="noopener noreferrer"
           className="movie-imdb-link"
+          onClick={(e) => {
+            e.preventDefault();
+            onOpenPopup(imdbLink);
+          }}
         >
           IMDb Link
         </a>
@@ -86,6 +84,10 @@ const MovieCard = ({ movie }) => {       // takes a movie prop as an argument
           target="_blank"
           rel="noopener noreferrer"
           className="movie-trailer-link"
+          onClick={(e) => {
+            e.preventDefault();
+            onWatchTrailer(youtubeLink);
+          }}
         >
           Watch Trailer
         </a>
